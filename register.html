@@ -1,14 +1,16 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register to login to protected resources</title>
   </head>
   <body>
     <p>Your web&email software will need to be configured to respond to mailto: links</p>
     <p>The expected use is with SMTP infrastructure using GPG/GPG keys</p>
     <form action="mailto:register@example.com" method="get" enctype="text/plain">
-        <input type="hidden" name="subject" value="Register via webform"><br>
-        <textarea name="body" rows="5" cols="30" placeholder="RFC1991 signed message from inviting site"></textarea><br>
-        <input type="submit" value="Register">
+      <input type="hidden" name="subject" value="Register via webform"><br>
+      <textarea name="body" rows="5" cols="30" placeholder="RFC1991 signed message from inviting site"></textarea><br>
+      <input type="submit" value="Register">
     </form>    
   </body>
 </html>
