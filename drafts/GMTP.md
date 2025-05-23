@@ -1,18 +1,32 @@
-Generalised Mail Transport Protocol 
+== General Mail Transport Protocol 
+
+= Working draft
 
 The core SMTP protocol is ammended as follows:
 
-Ignore below pending update...
-1/ Relay agents identify themselves with a GPG fingerprint instead of a hostname;
+S: 220 <fingerprint> General Mail Transfer Service Ready
 
-2/ Authenticating username is the identity associated with the key to protect against namespace colisions;
+C: EHLO postmaster@client.example.com
 
-3/ Password is the identity associated with the the other key;
+S: 250-smtp.server.com Hello postmaster@client.example.com
 
-4/ The sending relay signs the DATA payload;
+S: 250-SIZE 1000000
 
-Will probably joggle that around a bit and begin work on a proof of concept.
+S: 250 AUTH LOGIN
 
-Reference 
+C: AUTH PLAIN
 
-[SMTP/ESMTP](https://www.samlogic.net/articles/smtp-commands-reference.htm)
+S: 334 VXNlcm5hbWU6
+
+C: <base64 postmaster@server.example.com>
+
+S: 334 UGFzc3dvcmQ6
+
+C: <base64 fingerprint for postmaster@client.example.com>
+
+S: 235 2.7.0 Authentication successful
+ 
+= Reference 
+
+# [SMTP/ESMTP](https://www.samlogic.net/articles/smtp-commands-reference.htm)
+# [AUTH mechanisms](https://www.samlogic.net/articles/smtp-commands-reference-auth.htm)
