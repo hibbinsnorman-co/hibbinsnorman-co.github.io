@@ -1,6 +1,6 @@
-== General Mail Transport Protocol 
+# General Mail Transport Protocol 
 
-= Working draft
+## Working draft
 
 The core SMTP protocol is ammended as follows:
 
@@ -26,7 +26,7 @@ C: <base64 fingerprint for postmaster@client.example.com>
 
 S: 235 2.7.0 Authentication successful
  
-= Reference 
+## Reference 
 
-# [SMTP/ESMTP](https://www.samlogic.net/articles/smtp-commands-reference.htm)
-# [AUTH mechanisms](https://www.samlogic.net/articles/smtp-commands-reference-auth.htm)
+1. [SMTP/ESMTP](https://www.samlogic.net/articles/smtp-commands-reference.htm)
+2. [AUTH mechanisms](https://www.samlogic.net/articles/smtp-commands-reference-auth.htm)
