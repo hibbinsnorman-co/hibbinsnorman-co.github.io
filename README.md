@@ -5,3 +5,4 @@ Various Public Domain snippets
 Drafts
 
 [GMTP](drafts/GMTP.md)
+[GWTP](drafts/GWTP.md)
